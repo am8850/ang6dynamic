@@ -7,6 +7,7 @@ import { MessageComponent } from './dynamic-modules/message/message.component';
 import { Pr1Component } from './dynamic-modules/pr1/pr1.component';
 import { Pr2Component } from './dynamic-modules/pr2/pr2.component';
 import { Pr3Component } from './dynamic-modules/pr3/pr3.component';
+import { Pr4Component } from './dynamic-modules/pr4/pr4.component';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +23,9 @@ export class AppComponent {
   ) {
   }
 
-  private loadDynamic<T>(componetName: string): any {
+  private loadDynamic<T>(componentId: string): any {
     return this.dynamicComponentLoader
-      .getComponentFactory<T>(componetName)
+      .getComponentFactory<T>(componentId)
       .subscribe(componentFactory => {
         const ref = this.testOutlet.createComponent(componentFactory);
         ref.changeDetectorRef.detectChanges();
@@ -38,15 +39,15 @@ export class AppComponent {
   }
 
   pr2Load() {
-    this.loadDynamic<Pr1Component>('pr2');
+    this.loadDynamic<Pr2Component>('pr2');
   }
 
   pr3Load() {
-    this.loadDynamic<Pr1Component>('pr3');
+    this.loadDynamic<Pr3Component>('pr3');
   }
 
   pr4Load() {
-    this.loadDynamic<Pr1Component>('pr4');
+    this.loadDynamic<Pr4Component>('pr4');
   }
 
   loadComponent() {

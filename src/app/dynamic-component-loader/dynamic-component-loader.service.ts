@@ -17,8 +17,7 @@ export class DynamicComponentLoader {
     @Inject(DYNAMIC_COMPONENT_MANIFESTS) private manifests: DynamicComponentManifest[],
     private loader: NgModuleFactoryLoader,
     private injector: Injector,
-  ) {
-  }
+  ) {}
 
   /** Retrieve a ComponentFactory, based on the specified componentId (defined in the DynamicComponentManifest array). */
   getComponentFactory<T>(componentId: string, injector?: Injector): Observable<ComponentFactory<T>> {
