@@ -23,6 +23,26 @@ const manifests: DynamicComponentManifest[] = [
     path: 'dialog',
     loadChildren: './dynamic-modules/dialog/dialog.module#DialogModule',
   },
+  {
+    componentId: 'pr1',
+    path: 'pr1',
+    loadChildren: './dynamic-modules/pr1/pr1.module#Pr1Module',
+  },
+  {
+    componentId: 'pr2',
+    path: 'pr2',
+    loadChildren: './dynamic-modules/pr2/pr2.module#Pr2Module',
+  },
+  {
+    componentId: 'pr3',
+    path: 'pr3',
+    loadChildren: './dynamic-modules/pr3/pr3.module#Pr3Module',
+  },
+  {
+    componentId: 'pr4',
+    path: 'pr4',
+    loadChildren: './dynamic-modules/pr4/pr4.module#Pr4Module',
+  },
 ];
 
 @NgModule({
