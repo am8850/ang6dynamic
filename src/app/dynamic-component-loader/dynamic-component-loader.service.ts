@@ -1,4 +1,4 @@
-import { ComponentFactory, Inject, Injectable, Injector, NgModuleFactory, NgModuleFactoryLoader } from '@angular/core'
+import { ComponentFactory, Inject, Injectable, Injector, NgModuleFactory, NgModuleFactoryLoader } from '@angular/core';
 import { Observable } from 'rxjs-compat/Observable';
 import { fromPromise as ObservableFromPromise } from 'rxjs-compat/observable/fromPromise';
 import { _throw as ObservableThrow } from 'rxjs-compat/observable/throw';
